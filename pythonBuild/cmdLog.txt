@@ -1,0 +1,15 @@
+2024-03-15 15:02:57.351182
+已复制         1 个文件。
+scons: Reading SConscript files ...
+cwd:
+E:\MT5000\ForTest\1603s_app\src
+['E:\\MT5000\\ForTest\\1603s_app\\src', 'E:\\MT5000\\ForTest\\1603s_app\\src/inc', 'E:\\MT5000\\ForTest\\1603s_app\\src/inc/d02', 'E:\\MT5000\\ForTest\\1603s_app\\src/inc/firmware', 'E:\\MT5000\\ForTest\\1603s_app\\src/lupdate/include']
+scons: done reading SConscript files.
+scons: Building targets ...
+scons: building associated VariantDir targets: build
+scons: `.' is up to date.
+scons: done building targets.
+binconvert OK!
+****************************************************************
+***********************  SUCCESS  ******************************
+****************************************************************
