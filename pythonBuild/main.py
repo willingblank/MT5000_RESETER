@@ -1,13 +1,7 @@
-import time
 import os
 from datetime import datetime
-import pyscreeze
-import pyautogui
-import win32gui
-import win32con
 import winsound
 
-from multiprocessing import Process
 
 print("Hello this is MT5000 Build Process from willingblank.")
 
@@ -54,9 +48,9 @@ def buildProcess():
    
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
     
-buildProcess()
-os.chdir("../../../../pythonBuild")
-os.system("adownload.exe -u -a -q -s 115200 ../ATEL_SRC/AbootTool/releasepackage/ASR1603_LTEGSM_DataModule_16MB.zip ")
+if(buildProcess()):
+    os.chdir("../../../../pythonBuild")
+    os.system("adownload.exe -u -a -q -s 115200 ../ATEL_SRC/AbootTool/releasepackage/ASR1603_LTEGSM_DataModule_16MB.zip ")
 
 print("Download Process End.")
 #         FREQ(HZ) DURATION(MS)
