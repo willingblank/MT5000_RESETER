@@ -1,0 +1,308 @@
+parsing command line paramters ...
+auto quit enabeld.
+usb only enabeld.
+usb port auto enabeld.
+serial baud rate specified at "115200"
+running in upgrade mode.
+release package file name specified is "../ATEL_SRC/AbootTool/releasepackage/ASR1603_LTEGSM_DataModule_16MB.zip"
+finished parsing command line paramters.
+17:46:27.058 initializing aboot release package...
+17:46:27.061 Starting lwIP, IPv4 disable
+17:46:27.061 ip6 linklocal address: FE80::200:23FF:FE48:BE18
+17:46:27.062 extracting download.json (2 KB)...
+17:46:27.062 extracting partition.bin (2 KB)...
+17:46:27.063 ### ABOOT_EVENT_DOWNLOAD_INIT ###
+17:46:27.063 initialized aboot release package successfully.
+17:46:27.063 starting aboot download engine...
+17:46:27.063 extracting download.json (2 KB)...
+17:46:27.064 download engine running in upgrade mode!
+17:46:27.064 ### ABOOT_EVENT_DOWNLOAD_START ###
+17:46:27.064 aboot download engine started successfully.
+17:46:27.064 getting serial devices list...
+17:46:54.812 ### ABOOT_EVENT_DEVICE_NEW ###
+{
+	"description" : "Arom Usb Boot Port",
+	"displayName" : "Quectel Download Port (COM7)",
+	"enabled" : false,
+	"event" : 5,
+	"locationInfo" : "Port_#0002.Hub_#0001",
+	"order" : 0,
+	"path" : "COM7",
+	"productId" : 12292,
+	"progress" : 0,
+	"status" : "ONLINE",
+	"triggered" : false,
+	"vendorId" : 11980
+}
+17:46:54.812 ### ABOOT_EVENT_DEVICE_CHANGE ###
+{
+	"description" : "Arom Usb Boot Port",
+	"displayName" : "Quectel Download Port (COM7)",
+	"enabled" : true,
+	"event" : 6,
+	"locationInfo" : "Port_#0002.Hub_#0001",
+	"order" : 1,
+	"path" : "COM7",
+	"productId" : 12292,
+	"progress" : 0,
+	"status" : "CONNECTING",
+	"triggered" : false,
+	"vendorId" : 11980
+}
+17:46:54.812 <COM7> new device arrived.
+17:46:54.812 enabling device <COM7> into downloading mode...
+17:46:54.812 device <COM7> enabled successfully.
+17:46:54.812 connecting to serial device <COM7>...
+17:46:54.843 <COM7> connected to serial device <COM7> successfully!
+17:46:54.843 <COM7> starting to fire device <COM7>...
+17:46:54.844 <COM7> ONLINE device_open_failed_num = 0, device_list size = 1
+17:46:54.844 <COM7> device <COM7> fired successfully.
+17:46:55.945 <COM7> device <COM7> is ready to be enabled manually
+17:46:55.984 <COM7> #=> [INFO: Main      ] Downloading command detected.
+17:46:56.009 ### ABOOT_EVENT_DEVICE_CHANGE ###
+{
+	"description" : "Arom Usb Boot Port",
+	"displayName" : "Quectel Download Port (COM7)",
+	"enabled" : true,
+	"event" : 6,
+	"locationInfo" : "Port_#0002.Hub_#0001",
+	"order" : 1,
+	"path" : "COM7",
+	"productId" : 12292,
+	"progress" : 0,
+	"status" : "RUNNING",
+	"triggered" : false,
+	"vendorId" : 11980
+}
+17:46:56.009 <COM7> processing command [get bootrom info]
+17:46:56.013 <COM7> processing command [require product arom-tiny]
+17:46:56.013 <COM7> Checking product
+17:46:56.013 <COM7> OKAY [  0.000s]
+17:46:56.014 <COM7> processing command [require version 0.5]
+17:46:56.014 <COM7> Checking version
+17:46:56.014 <COM7> OKAY [  0.000s]
+17:46:56.014 <COM7> processing command [require version-bootrom 2020.07.30]
+17:46:56.014 <COM7> Checking version-bootrom
+17:46:56.015 <COM7> OKAY [  0.001s]
+17:46:56.015 <COM7> processing command [progress weight 20930560]
+17:46:56.015 <COM7> setting total progress
+17:46:56.017 <COM7> OKAY [  0.002s]
+17:46:56.018 <COM7> target reported max download size of 65408 bytes
+17:46:56.018 <COM7> extracting preboot.img (33 KB)...
+17:46:56.019 <COM7> processing command [call preboot.img]
+17:46:56.019 <COM7> Sending 'preboot.img' (33 KB)
+17:46:56.090 <COM7> OKAY [  0.071s]
+17:46:56.090 <COM7> verifying
+17:46:56.095 <COM7> OKAY [  0.005s]
+17:46:56.095 <COM7> calling
+17:46:56.221 <COM7> #=> [INFO: Freq      ] Freq change done: CR5 624MHz -> 624MHz, AXI 208MHz -> 208MHz
+17:46:56.221 <COM7> #=> [PRI : Preboot   ] Executing preboot application...
+17:46:56.221 <COM7> #=> [PRI : Preboot   ] Preboot version: 2022.11.28
+17:46:56.221 <COM7> #=> [INFO: Fuse      ] Sbe = 0, sys_boot_ctrl=0x8008006
+17:46:56.221 <COM7> #=> [PRI : Preboot   ] Usb phy reg 29 0x1888 -> 0x189b
+17:46:56.221 <COM7> #=> [INFO: EFuse     ] lotid[0..5]: 29 3 18 0 7 1
+17:46:56.221 <COM7> #=> [INFO: EFuse     ] X_location: 75, Y_location: 22, Wafer: 12
+17:46:56.221 <COM7> #=> [PRI : PMIC      ] Found PMIC with Id: 0x18
+17:46:56.221 <COM7> #=> [INFO: PMIC      ] Set prcharge current to 150mA
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] PM816/PM813s/PM813_PRE_CHARGE_CURRENT_SETTING_REG: [0x21] = 0x0
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] Disabling PMIC watchdog
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] PMIC watchdog is disabled
+17:46:56.224 <COM7> #=> [PRI : PMIC      ] [BP_0xe5] = 0x0
+17:46:56.224 <COM7> #=> [PRI : PMIC      ] [BP_0xe6] = 0x0
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] Set PM813_DVC_SET_REG = 0x0, set bit7 to 0.
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] Set cpu core voltage, PM813_BUCK1_VOLTAGE_SET_REG = 0x9e
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] Set skip mode PM_FSM_BUCK1_REG2 = 0x38, set bit5 to 1.
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] CraneM pm803: set ldo7 sleep mode 1.6v: [0x82] = 0xb2
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] CraneM pm803: set ldo7 active mode 1.6v: [0x83] = 0x82
+17:46:56.224 <COM7> #=> [PRI : Preboot   ] Power_up_reason=0x2.
+17:46:56.224 <COM7> #=> [INFO: PMIC      ] Disable PMIC fault wakeup.
+17:46:56.224 <COM7> #=> [WARN: Preboot   ] Warning: power_up_reason=0x2 is abnormal.
+17:46:56.224 <COM7> #=> [PRI : Psram     ] [PSRAM] psram init Crane common.
+17:46:56.224 <COM7> #=> [INFO: Psram     ] set phy_drive=PHY_DRIVE_200ohm 
+17:46:56.224 <COM7> #=> [INFO: Psram     ] ########################
+17:46:56.224 <COM7> #=> [INFO: Psram     ] Version ID : 9
+17:46:56.224 <COM7> #=> [PRI : Psram     ] WB_250MHZ_8M8M
+17:46:56.225 <COM7> #=> [PRI : EFuse     ] No embedded flash
+17:46:56.225 <COM7> #=> [INFO: Psram     ] ########################
+17:46:56.225 <COM7> #=> [PRI : Psram     ] [PSRAM] psram init set WBD drive_strength = WBD_DRIVE_115ohm .
+17:46:56.225 <COM7> #=> [INFO: Psram     ] [PSRAM] version:[4]  dis_psc_cache:[0].
+17:46:56.225 <COM7> #=> [INFO: Psram     ] Mmap psram address spaces: reg[0xc0100004] = 0x7e684001
+17:46:56.225 <COM7> #=> [PRI : Psram     ] Psram cache enabled !!! :cache size=[128B], @[0xC0104000]=[0x000A3B11]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] Psram cache : flush_idle @[0xC0104020]=[0xF0000200]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] Psram dis_psc_ckagate @[0xC0104008]=[0x80000000]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] Do Globel Reset
+17:46:56.225 <COM7> #=> [INFO: Psram     ] Enable fast_miss_acc
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1000_CS0: @[0xC0108034]=[0x00001000]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1000_CS0: @[0xC0108038]=[0x039F039F]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1002_CS0: @[0xC0108034]=[0x00001002]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1002_CS0: @[0xC0108038]=[0xC1FFC1FF]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1000_CS1: @[0xC0108034]=[0x00801000]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1000_CS1: @[0xC0108038]=[0x039F039F]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1002_CS1: @[0xC0108034]=[0x00801002]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] RB: MR0x1002_CS1: @[0xC0108038]=[0xC1FFC1FF]
+17:46:56.225 <COM7> #=> [INFO: Psram     ] PSRAM PHY frequency changed to 175
+17:46:56.225 <COM7> #=> [INFO: Psram     ] PMU_MC_HW_SLP_TYPE, [0xD42828B0]=[0x60650230].
+17:46:56.225 <COM7> #=> [INFO: Preboot   ] Set fip image load address spaces to 0x7e000000
+17:46:56.225 <COM7> OKAY [  0.130s]
+17:46:56.226 <COM7> target reported max download size of 65408 bytes
+17:46:56.226 <COM7> extracting flasher.img (30 KB)...
+17:46:56.227 <COM7> processing command [call flasher.img]
+17:46:56.227 <COM7> Sending 'flasher.img' (30 KB)
+17:46:56.294 <COM7> OKAY [  0.067s]
+17:46:56.294 <COM7> verifying
+17:46:56.301 <COM7> OKAY [  0.007s]
+17:46:56.301 <COM7> calling
+17:46:56.460 <COM7> #=> [INFO: Flasher   ] Executing flasher application...
+17:46:56.460 <COM7> #=> [INFO: Flasher   ] Flasher version: 2022.11.28
+17:46:56.460 <COM7> OKAY [  0.159s]
+17:46:56.463 <COM7> target reported max download size of 1048576 bytes
+17:46:56.464 <COM7> extracting flashinfo.bin (1 KB)...
+17:46:56.464 <COM7> processing command [partition flashinfo.bin]
+17:46:56.464 <COM7> Sending 'flashinfo.bin' (1 KB)
+17:46:56.468 <COM7> OKAY [  0.004s]
+17:46:56.468 <COM7> setting flash information
+17:46:56.472 <COM7> #=> [INFO: QspiNor   ] qspi_nor_flash_probe A1
+17:46:56.472 <COM7> #=> [INFO: Qspi      ] QSPI clock configured at 52 MHz
+17:46:56.472 <COM7> #=> [INFO: QspiNor   ] combined_flash_size_in_mb = 0MB
+17:46:56.472 <COM7> #=> [INFO: QspiNor   ] Manufacturer ID: 0x20, Device ID: 0x4118.
+17:46:56.472 <COM7> #=> [INFO: Qspi      ] QSPI clock configured at 104 MHz
+17:46:56.472 <COM7> #=> [INFO: QspiNor   ] Found a known spi flash device "XM25QU128C".
+17:46:56.472 <COM7> #=> [PRI : QspiNor   ] update SMPR bit5=1, use falling edge.
+17:46:56.472 <COM7> #=> [INFO: QspiNor   ] flash_cancel_block_protected_dq: status3 = 0x20, status2 = 0x2, status1 = 0x0.
+17:46:56.473 <COM7> (flasher) parse flash information table successfully.
+17:46:56.473 <COM7> OKAY [  0.005s]
+17:46:56.473 <COM7> target reported max download size of 1048576 bytes
+17:46:56.474 <COM7> extracting partition.bin (2 KB)...
+17:46:56.475 <COM7> processing command [partition partition.bin]
+17:46:56.475 <COM7> Sending 'partition.bin' (2 KB)
+17:46:56.481 <COM7> OKAY [  0.006s]
+17:46:56.481 <COM7> setting partition
+17:46:56.483 <COM7> #=> [INFO: Aboot     ] published 21 partition information table.
+17:46:56.483 <COM7> (flasher) parse partition table successfully.
+17:46:56.483 <COM7> OKAY [  0.002s]
+17:46:56.484 <COM7> target reported max download size of 1048576 bytes
+17:46:56.484 <COM7> extracting bootloader.ubi (100 KB)...
+17:46:56.487 <COM7> processing command [flash bootloader bootloader.ubi]
+17:46:56.487 <COM7> Erasing 'bootloader'...
+17:46:56.488 <COM7> (flasher) erasing 'bootloader' scheduled in background
+17:46:56.488 <COM7> OKAY [  0.001s]
+17:46:56.488 <COM7> Sending sparse 'bootloader' 1/1 (100 KB)...
+17:46:56.488 <COM7> (flasher) erasing partition 'bootloader'
+17:46:56.693 <COM7> OKAY [  0.205s]
+17:46:56.693 <COM7> Writing 'bootloader' 1/1...
+17:46:56.694 <COM7> (flasher) writing 'bootloader' scheduled in background
+17:46:56.694 <COM7> OKAY [  0.001s]
+17:46:56.695 <COM7> target reported max download size of 1048576 bytes
+17:46:56.696 <COM7> extracting partition.bin (2 KB)...
+17:46:56.697 <COM7> processing command [flash ptable partition.bin]
+17:46:56.697 <COM7> Sending sparse 'ptable' 1/1 (4 KB)...
+17:46:56.708 <COM7> OKAY [  0.011s]
+17:46:56.708 <COM7> Writing 'ptable' 1/1...
+17:46:56.709 <COM7> (flasher) writing 'ptable' scheduled in background
+17:46:56.709 <COM7> OKAY [  0.001s]
+17:46:56.709 <COM7> target reported max download size of 1048576 bytes
+17:46:56.710 <COM7> extracting fwcerts.bin (1 KB)...
+17:46:56.712 <COM7> processing command [flash fwcerts fwcerts.bin]
+17:46:56.712 <COM7> Sending sparse 'fwcerts' 1/1 (4 KB)...
+17:46:56.722 <COM7> OKAY [  0.010s]
+17:46:56.722 <COM7> Writing 'fwcerts' 1/1...
+17:46:56.724 <COM7> (flasher) writing 'fwcerts' scheduled in background
+17:46:56.724 <COM7> OKAY [  0.002s]
+17:46:56.727 <COM7> target reported max download size of 1048576 bytes
+17:46:56.727 <COM7> extracting ReliableData.bin (64 KB)...
+17:46:56.729 <COM7> processing command [flash rd ReliableData.bin]
+17:46:56.729 <COM7> Sending sparse 'rd' 1/1 (24 KB)...
+17:46:56.780 <COM7> OKAY [  0.051s]
+17:46:56.780 <COM7> Writing 'rd' 1/1...
+17:46:56.781 <COM7> (flasher) writing 'rd' scheduled in background
+17:46:56.781 <COM7> OKAY [  0.001s]
+17:46:56.781 <COM7> target reported max download size of 1048576 bytes
+17:46:56.782 <COM7> extracting apn.bin (26 KB)...
+17:46:56.784 <COM7> processing command [flash apn apn.bin]
+17:46:56.784 <COM7> Sending sparse 'apn' 1/1 (28 KB)...
+17:46:56.843 <COM7> OKAY [  0.059s]
+17:46:56.843 <COM7> Writing 'apn' 1/1...
+17:46:56.843 <COM7> (flasher) writing 'apn' scheduled in background
+17:46:56.843 <COM7> OKAY [  0.000s]
+17:46:56.844 <COM7> target reported max download size of 1048576 bytes
+17:46:56.845 <COM7> extracting cp.bin (4 MB)...
+17:46:56.880 <COM7> processing command [flash cp cp.bin]
+17:46:56.880 <COM7> Sending sparse 'cp' 1/5 (1020 KB)...
+17:46:56.962 <COM7> (flasher) erase "bootloader" done. 
+17:46:56.962 <COM7> (flasher) programming partition 'bootloader' with datap = #0x7e300000, size = 0x19044
+17:46:57.210 ### ABOOT_EVENT_DEVICE_CHANGE ###
+{
+	"description" : "Arom Usb Boot Port",
+	"displayName" : "Quectel Download Port (COM7)",
+	"enabled" : true,
+	"event" : 6,
+	"locationInfo" : "Port_#0002.Hub_#0001",
+	"order" : 1,
+	"path" : "COM7",
+	"productId" : 12292,
+	"progress" : 1,
+	"status" : "RUNNING",
+	"triggered" : false,
+	"vendorId" : 11980
+}
+17:46:57.316 <COM7> (flasher) program "bootloader" done.
+17:46:57.316 <COM7> (flasher) programming partition 'ptable' with datap = #0x7e400000, size = 0x1044
+17:46:57.368 <COM7> (flasher) program "ptable" done.
+17:46:57.368 <COM7> (flasher) programming partition 'fwcerts' with datap = #0x7e500000, size = 0x1044
+17:46:57.428 <COM7> (flasher) program "fwcerts" done.
+17:46:57.428 <COM7> (flasher) programming partition 'rd' with datap = #0x7e600000, size = 0x605c
+17:46:57.854 <COM7> (flasher) program "rd" done.
+17:46:57.854 <COM7> (flasher) programming partition 'apn' with datap = #0x7e700000, size = 0x7044
+17:46:58.246 <COM7> (flasher) program "apn" done.
+17:46:58.985 <COM7> OKAY [  2.105s]
+17:46:58.985 <COM7> Writing 'cp' 1/5...
+17:46:58.986 <COM7> (flasher) writing 'cp' scheduled in background
+17:46:58.986 <COM7> OKAY [  0.001s]
+17:46:58.986 <COM7> Sending sparse 'cp' 2/5 (1020 KB)...
+17:46:58.990 <COM7> (flasher) programming partition 'cp' with datap = #0x7e100000, size = 0xff054
+17:46:59.156 Writing to COM port (GetOverlappedResult): Unknown error code 31
+17:46:59.156 <COM7> send data to serial device <COM7> failed with error "system_error"
+17:46:59.156 Reading from COM port (ReadIOCompletion): Unknown error code 31
+17:46:59.179 <COM7> device offlined
+17:46:59.179 <COM7> extinguishing device <COM7>...
+17:46:59.291 <COM7> FAILED (status malformed (0 bytes))
+17:46:59.291 <COM7> all finished. total time: 3.282s
+17:46:59.291 ### ABOOT_EVENT_DEVICE_CHANGE ###
+{
+	"description" : "Arom Usb Boot Port",
+	"displayName" : "Quectel Download Port (COM7)",
+	"enabled" : true,
+	"event" : 6,
+	"locationInfo" : "Port_#0002.Hub_#0001",
+	"order" : 1,
+	"path" : "COM7",
+	"productId" : 12292,
+	"progress" : 0,
+	"status" : "FAILEDstatus malformed (0 bytes)",
+	"triggered" : false,
+	"vendorId" : 11980
+}
+17:46:59.291 ### ABOOT_EVENT_DEVICE_CHANGE ###
+{
+	"description" : "Arom Usb Boot Port",
+	"displayName" : "Quectel Download Port (COM7)",
+	"enabled" : true,
+	"event" : 6,
+	"locationInfo" : "Port_#0002.Hub_#0001",
+	"order" : 1,
+	"path" : "COM??",
+	"productId" : 12292,
+	"progress" : 0,
+	"status" : "OFFLINE",
+	"triggered" : false,
+	"vendorId" : 11980
+}
+17:46:59.291 <COM7> device <COM7> extinguished successfully.
+17:46:59.291 <COM7> disconnecting from serial device <COM7>...
+17:46:59.291 disconnected from serial device <COM7> successfully!
+17:46:59.291 <COM7> OFFLINE device_open_failed_num = 0, device_list size = 0
+17:46:59.291 received all devices closed message.
+17:46:59.291 stopping aboot download engine...
+17:46:59.298 ### ABOOT_EVENT_DOWNLOAD_STOP ###
+17:46:59.291 received all devices closed message.
+17:46:59.298 aboot download engine stopped successfully.

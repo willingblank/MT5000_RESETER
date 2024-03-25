@@ -1,4 +1,4 @@
-2024-03-15 15:02:57.351182
+2024-03-25 10:18:58.695888
 已复制         1 个文件。
 scons: Reading SConscript files ...
 cwd:
@@ -7,7 +7,9 @@ E:\MT5000\ForTest\1603s_app\src
 scons: done reading SConscript files.
 scons: Building targets ...
 scons: building associated VariantDir targets: build
-scons: `.' is up to date.
+arm-none-eabi-gcc -o src\driver\SampleCode_NMEAParser.o -c -mcpu=cortex-r5 -mtune=cortex-r5 -g -Os -std=gnu99 -ffunction-sections -fdata-sections -fno-builtin -D GCC_COMPILE -D _POSIX_TIMERS -mfloat-abi=soft -O2 -DATEL_OPENCPU -DATEL_OPENCPU_PLATFORM -DDEBUGF -DATEL_HW_TEST -I. -Iexamples\inc -Isrc -Isrc\inc -Isrc\inc\d02 -Isrc\inc\firmware -Isrc\lupdate\include -Izcore\drivers\inc -Izcore\filesystem\inc -Izcore\http\inc -Izcore\network\inc -Izcore\os\inc -Izcore\utils\inc src\driver\SampleCode_NMEAParser.c
+arm-none-eabi-ld -o build\customer_app.elf --wrap=malloc --wrap=free --wrap=printf --wrap=snprintf --wrap=sprintf --wrap=sscanf -T gcclink.ld -Map 123.map build\src\APP_entry.o build\src\app_fs.o build\src\app_main.o build\src\app_test.o build\src\app_timer.o build\src\byd_service_timer.o build\src\byd_socket_manager.o build\src\byd_tracker.o src\driver\SampleCode_NMEAParser.o src\driver\byd_device.o src\driver\byd_gpio.o src\driver\byd_gprs.o src\driver\byd_gps.o src\driver\byd_gsensor.o src\driver\byd_gsm.o src\driver\byd_infostore.o src\driver\byd_protocol.o src\driver\com.o src\driver\drv_gpio.o src\driver\drv_i2c.o src\driver\mbx_common_config.o src\driver\sys_time.o src\os_api\at_api_interface.o src\os_api\fs_api_interface.o src\os_api\gps_api_interface.o src\os_api\hw_api_interface.o src\os_api\network_api_interface.o src\os_api\os_api_interface.o src\os_api\queue_api_interface.o build\zcore\libcore.a -Ltools\gcc-arm-none-eabi-10-2020-q4-major\arm-none-eabi\lib -lc -lm -lgcc -lg -lnosys -lrdpmon -lrdimon -lapp
+arm-none-eabi-objcopy -O binary build\customer_app.elf build\customer_app.bin
 scons: done building targets.
 binconvert OK!
 ****************************************************************

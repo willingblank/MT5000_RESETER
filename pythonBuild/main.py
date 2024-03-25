@@ -5,8 +5,12 @@ import pyscreeze
 import pyautogui
 import win32gui
 import win32con
+import winsound
+
+from multiprocessing import Process
 
 print("Hello this is MT5000 Build Process from willingblank.")
+
 
 def buildProcess():
     with open(r'cmdLog.txt','w') as cmdlog:
@@ -14,7 +18,13 @@ def buildProcess():
         cmdlog.write("\r\n")
 
     # Build App
-    os.chdir("../1603s_app/")
+    os.chdir("../1603s_app/libapp")
+    os.system("make")   
+    os.chdir("./out")
+    os.system("xcopy /y libapp.a ..\..\ ")
+
+    # Build App
+    os.chdir("../../")
     os.system("build.bat>>../pythonBuild/cmdLog.txt")   
 
     os.chdir("../pythonBuild/")
@@ -41,43 +51,15 @@ def buildProcess():
         print(">===========================<")
     return buildSuccessFlag
 
-
-try:   
-    hwnd = win32gui.FindWindow(None, 'QFlash_V6.9')
-    left, top, right, bottom = win32gui.GetWindowRect(hwnd)
-except Exception as error:
-    print("QFlash is not Running Now.")
-else:
-    print("QFlash is Already Existed.")
-    win32gui.PostMessage(hwnd, win32con.WM_CLOSE, 0, 0)
-    time.sleep(1)
    
-if(buildProcess()):
-    os.chdir("../../../../pythonBuild")
-    os.system("QflashLaunch.bat")
-    time.sleep(2)
-    hwnd = win32gui.FindWindow(None, 'QFlash_V6.9')
-    left, top, right, bottom = win32gui.GetWindowRect(hwnd)
-    x_record,y_record = pyautogui.position()
-    pyautogui.click(left+250, top+550)
-    pyautogui.moveTo(x_record, y_record)
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+    
+buildProcess()
+os.chdir("../../../../pythonBuild")
+os.system("adownload.exe -u -a -q -s 115200 ../ATEL_SRC/AbootTool/releasepackage/ASR1603_LTEGSM_DataModule_16MB.zip ")
 
-
-detect_counter = 0
-while 1:
-    try:
-        if(detect_counter%2 == 0):
-            pyscreeze.locateOnScreen('passPic.jpg',confidence=0.9)
-        else:
-            pyscreeze.locateOnScreen('succeedPic.jpg',confidence=0.9)
-    except Exception as error:
-        print('|',end='',flush=True)
-        detect_counter * detect_counter + 1
-        time.sleep(1)
-    else:
-        print("Download SUCCESS.")
-        win32gui.PostMessage(hwnd, win32con.WM_CLOSE, 0, 0)
-        break
-
+print("Download Process End.")
+#         FREQ(HZ) DURATION(MS)
+winsound.Beep(440, 500) 
 
 
