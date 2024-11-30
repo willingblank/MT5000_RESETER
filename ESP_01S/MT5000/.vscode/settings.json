@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "pubsubclient.h": "c",
+        "mqtt.h": "c",
+        "wifi.h": "c",
+        "esp8266wifi.h": "c",
+        "*.tcc": "cpp"
+    }
+}
