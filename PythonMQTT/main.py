@@ -14,7 +14,8 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect("broker.mqtt.cool", 1883, 60)
+# client.connect("broker.mqtt.cool", 1883, 60)
+client.connect("broker.emqx.io", 1883, 60)
 client.publish("willingblank", "Hello, World willingblank!")
 
 client.loop_forever()
